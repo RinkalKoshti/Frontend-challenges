@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url("assets/fonts/static/Inter-Bold.ttf"),
+    url("assets/fonts/static/Inter-Regular.ttf"),
+    url("assets/fonts/static/Inter-SemiBold.ttf");
+}
+
+.main {
+    font-family: 'Inter';
+    background: rgb(255, 255, 255);
+    width: 100%;
+    height: 100vh;
+    padding-top: 8rem;
+}
+
+.container {
+    width: 300px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    /* color: hsl(0, 0%, 100%); */
+    border: 1px solid black;
+}
+
+.container .main-img {
+    width: 25%;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.user-content> *:not(:last-child) {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+.container .user-content .profile-name {
+    font-size: 22px;
+    font-style: normal;
+}
+
+.container .user-content .profile-location {
+    font-size: 12px;
+}
+
+.container .user-content .profile-info {
+    font-size: 12px;
+}
+
+.container .user-content {
+    margin-bottom: 20px;
+}
+
+.container .social-links button {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.social-links> *:not(:last-child) {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.social-links img {
+    width: 15px;
+    height: 15px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: black;
+}
+
+.social-links button {
+    padding: 10px;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    border: 0;
+    /* color: hsl(0, 0%, 100%); */
+}
+
+.social-links button:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width:425px) {
+    .container {
+        width: 80%;
+    }
+}
