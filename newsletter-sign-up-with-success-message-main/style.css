@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("assets/fonts/Roboto-Bold.ttf") format(truetype),
+    url("assets/fonts/Roboto-Regular.ttf") format(truetype),
+    url("assets/fonts/Roboto-Light.ttf") format(truetype);
+}
+
+body {
+    background-color: hsl(234, 29%, 20%);
+    font-size: 16px;
+    font-family: 'Roboto';
+}
+
+.container {
+    width: 825px;
+    height: 600px;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    gap: 1rem;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 4.2rem auto;
+}
+
+.content {
+    flex: 50%;
+    padding: 5rem 2rem;
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: hsl(235, 18%, 26%);
+}
+
+.img {
+    flex: 50%;
+    background-image: url("assets/images/illustration-sign-up-desktop.svg");
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+#img {
+    width: 100%;
+    height: 100%;
+}
+
+ul {
+    margin-bottom: 2.25rem;
+    padding-left: 0;
+}
+
+ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 15px;
+    font-size: 13px;
+    color: hsl(235, 18%, 26%);
+}
+
+ul li img {
+    width: 20px;
+    height: 20px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid hsl(231, 7%, 60%);
+    border-radius: 10px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input.error {
+    border: 1px solid red;
+    background-color: hsl(4, 96%, 82%);
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    color: hsl(0, 0%, 100%);
+    background: hsl(234, 29%, 20%);
+    border: none;
+    border-radius: 10px;
+    transition: all .5s;
+}
+
+button:hover {
+    color: hsl(0, 0%, 5%);
+    background: hsl(4, 100%, 67%);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.modal {
+    background: hsl(234, 29%, 20%);
+    display: none;
+    /* transform: scale(.8); */
+}
+
+.modal-dialog  {
+    width: 425px;
+    padding: 40px;
+    margin: 8rem auto;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    transition: all .5s;
+}
+
+.modal-dialog.active {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 0;
+    padding: 30px;
+}
+
+.modal-dialog.active .modal-content {
+    height: 100%;
+}
+
+.modal-dialog.active img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 40px;
+}
+
+.modal-dialog.active button {
+    position: absolute;
+    bottom: 1rem;
+}
+
+.modal-content {
+    max-width: 100%;
+    border: none;
+}
+
+.modal-content h1 {
+    max-width: 100%;
+}
+
+.modal-dialog .image {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+/* .attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); } */
+
+@media screen and (max-width: 1000px) {
+    .container {
+        height: 525px;
+        margin: 5rem auto;
+    }
+    .content {
+        padding: 2rem 1rem;
+    }
+}
+
+@media screen and (max-width: 786px) {
+    .container {
+        max-width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0;
+        border-radius: 0;
+        padding: 0;
+    }
+    .img {
+        background-image: url("assets/images/illustration-sign-up-mobile.svg");
+        height: 18rem;
+        flex: auto;
+        background-size: cover;
+        overflow: hidden;
+    }
+    .content {
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    h1 {
+        font-size: 38px;
+    }
+    .content {
+        padding: 1rem;
+    }
+}
