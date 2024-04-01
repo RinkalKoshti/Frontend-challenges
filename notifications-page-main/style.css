@@ -1,0 +1,207 @@
+:root {
+    --Red: hsl(1, 90%, 64%);
+    --Blue: hsl(219, 85%, 26%);
+    --White: hsl(0, 0%, 100%);
+    --Very-light-grayish-blue: hsl(210, 60%, 98%);
+    --Light-grayish-blue-1: hsl(211, 68%, 94%);
+    --Light-grayish-blue-2: hsl(205, 33%, 90%);
+    --Grayish-blue: hsl(219, 14%, 63%);
+    --Dark-grayish-blue: hsl(219, 12%, 42%);
+    --Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+
+
+@font-face {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    src: url("assets/fonts/static/PlusJakartaSans-ExtraBold.ttf") format(truetype),
+    url("assets/fonts/static/PlusJakartaSans-Medium.ttf") format(truetype),
+    url("assets/fonts/PlusJakartaSans-VariableFont_wght.ttf") format(truetype);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Very-light-grayish-blue);
+}
+
+.container {
+    background-color: var(--White);
+    max-width: 100%;
+    width: 635px;
+    height: auto;
+    padding: 15px;
+    margin: 3rem auto;
+    box-shadow: 0 4px 8px 0 var(--Light-grayish-blue-1);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    border-radius: 10px;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* font-size: 1.75rem; */
+}
+
+h2 small {
+    margin-left: 10px;
+    padding: 2px 10px;
+    border-radius: 5px;
+    background-color: var(--Blue);
+    color: var(--White);
+    font-size: 14px;
+}
+
+header p {
+    font-size: 16px;
+    font-weight: 200;
+    font-style: normal;
+    color: var(--Dark-grayish-blue);
+}
+
+header p:hover {
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--Blue);
+}
+
+.notify-container {
+    margin-left: 10px;
+}
+
+.notify-container .row {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    padding: 5px;
+    color: var(--Dark-grayish-blue);
+    border-radius: 10px;
+}
+
+.row:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.row.active {
+    background-color: var(--Very-light-grayish-blue);
+}
+
+.row img {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.row strong {
+    color: var(--Very-dark-blue);
+}
+
+.row strong:hover,
+.one .content p m:hover,
+.seven .content p m {
+    cursor: pointer;
+    color: var(--Blue);
+}
+
+m {
+    font-weight: bold;
+    color: var(--Dark-grayish-blue);
+}
+
+.three .content p m {
+    font-weight: bold;
+    color: var(--Blue);
+}
+
+.msg{
+    padding: 15px;
+    border: 1px solid var(--Light-grayish-blue-1);
+    border-radius: 5px;
+}
+
+.msg:hover {
+    cursor: pointer;
+    background-color: var(--Light-grayish-blue-1);
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--Red);
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 3px;
+}
+
+.dot.active {
+    display: none;
+}
+
+.row .content {
+    flex: 1;
+    margin: 15px 15px 15px 10px;
+}
+
+.five .content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.five .content .col {
+    flex: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.five .right-img {
+    margin: 0;
+}
+
+.four .content .msg {
+    margin-top: 10px;
+}
+
+@media only screen and (max-width:600px) {
+    .container {
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+    }
+    .notify-container {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .notify-container .row {
+        align-items: flex-start;
+    }
+    .row .content {
+        margin: 13px 10px;
+    } 
+    .five .content {
+        gap: .5rem;
+    }  
+    .five .right-img {
+        flex: 10%;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        margin: 0;
+    }
+}
