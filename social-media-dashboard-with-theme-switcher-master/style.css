@@ -1,0 +1,311 @@
+:root {
+    /* primary */
+    --Lime-Green: hsl(163, 72%, 41%);
+    --Bright-Red: hsl(356, 69%, 56%);
+    --Facebook: hsl(208, 92%, 53%);
+    --Twitter: hsl(203, 89%, 53%);
+    --Instagram-one: hsl(37, 97%, 70%);
+    --Instagram-two: hsl(329, 70%, 58%);
+    --YouTube: hsl(348, 97%, 39%);
+    --Toggle-dark-theme-one: hsl(210, 78%, 56%);
+    --Toggle-dark-theme-two: hsl(146, 68%, 55%);
+    --Toggle-light-theme: hsl(230, 22%, 74%);
+
+    /* dark theme */
+    --Very-Dark-Blue-bg: hsl(230, 17%, 14%);
+    --Very-Dark-Blue-top-bg-pattern: hsl(232, 19%, 15%);
+    --Dark-Desaturated-Blue-card-bg: hsl(228, 28%, 20%);
+    --Desaturated-Blue-text: hsl(228, 34%, 66%);
+    --White-text: hsl(0, 0%, 100%);
+
+    /* light theme */
+    --White-bg: hsl(0, 0%, 100%);
+    --Very-Pale-Blue-top-bg-pattern: hsl(225, 100%, 98%);
+    --Light-Grayish-Blue-card-bg: hsl(227, 47%, 96%);
+    --Dark-Grayish-Blue-text: hsl(228, 12%, 44%);
+    --Very-Dark-Blue-text: hsl(230, 17%, 14%);
+}
+
+@font-face {
+    font-family: "Inter", sans-serif;
+    src: url("fonts/static/Inter-Bold.ttf") format(truetype),
+    url("fonts/static/Inter-Regular.ttf") format(truetype),
+    url("fonts/static/Inter-SemiBold.ttf") format(truetype),
+    url("fonts/Inter-VariableFont_slnt\,wght.ttf") format(truetype);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+}
+
+/* light theme */
+
+header {
+    max-width: 100%;
+    width: 100vw;
+    height: 30vh;
+    background-color: var(--Very-Pale-Blue-top-bg-pattern);
+}
+
+.container {
+    max-width: 100%;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 1.75rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .container .heading h1{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+header .container .heading p,
+header .container .toggle p {  
+    font-weight: bold;  
+    color: var(--Dark-Grayish-Blue-text);
+}
+
+header .container .toggle {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+header .container .toggle .switch {
+    position: relative;
+    max-width: 100%;
+    width: 54px;
+    height: 24px;
+    background-color: var(--Toggle-light-theme);
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+header .container .toggle .switch::after {
+    content: "";
+    position: absolute;
+    max-width: 100%;
+    top: 3px;
+    right: 4px;
+    width: 18px;
+    height: 18px;
+    background-color: var(--Light-Grayish-Blue-card-bg);
+    border-radius: 50%;
+    transition: all .5s;
+}
+
+#checkbox {
+    display: none;
+}
+
+header .container .toggle .switch:hover {
+    background-image: linear-gradient(to right, var(--Toggle-dark-theme-one), var(--Toggle-dark-theme-two));
+}
+
+#checkbox:checked + .switch {
+    background-image: linear-gradient(to right, var(--Toggle-dark-theme-one), var(--Toggle-dark-theme-two));
+}
+
+#checkbox:checked + .switch::after {
+    right: 32px;
+}
+
+main {
+    max-width: 100%;
+    width: 80vw;
+    margin: -5rem auto 0 auto;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+main .major-cards {
+    margin-bottom: 2rem;
+}
+
+.card {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 5px;
+    display: grid;
+    gap: 1rem;
+}
+
+.card-light {
+    background-color: var(--Light-Grayish-Blue-card-bg);
+}
+
+.one {
+    border-top: 2px solid var(--Facebook);
+}
+
+.two {
+    border-top: 2px solid var(--Twitter);
+}
+
+.three {
+    background: linear-gradient(var(--Light-Grayish-Blue-card-bg), var(--Light-Grayish-Blue-card-bg)) padding-box,
+              linear-gradient(to right, var(--Instagram-one), var(--Instagram-two)) border-box;
+    border-top: 2px solid transparent;
+}
+
+.four {
+    border-top: 2px solid var(--YouTube);
+}
+
+.card .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.card .card-header span {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--Dark-Grayish-Blue-text);
+}
+
+.card .card-body strong {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.card .card-body pre {
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    color: var(--Dark-Grayish-Blue-text);
+    text-transform: uppercase;
+}
+
+.card .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+   
+}
+
+.green {
+    color: var(--Lime-Green);
+    font-weight: bold;
+}
+
+.red {
+    color: var(--Bright-Red);
+    font-weight: bold;
+}
+
+.minor-cards h2 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.h2-light {
+    color: var(--Dark-Grayish-Blue-text);
+}
+
+.minor-cards .small-card {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.minor-cards .small-card .col {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.minor-cards .small-card .col:last-child {
+    align-items: end;
+}
+
+.minor-cards .small-card .col p {
+    color: var(--Dark-Grayish-Blue-text);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.minor-cards .small-card .col b {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.precent {
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+}
+
+/* dark theme */
+
+.dark-body {
+    background: var(--Very-Dark-Blue-bg);
+    color: var(--White-text);
+}
+
+.dark-h2 {
+    color: var(--White-text);
+}
+
+.dark-header-top {
+    background: var(--Very-Dark-Blue-top-bg-pattern);
+}
+
+.dark-card {
+    background: var(--Dark-Desaturated-Blue-card-bg);
+}
+
+@media only screen and (max-width:786px) {
+    .container {
+        width: 90vw;
+        margin: 0 auto;
+        align-items: flex-start;
+    }
+    .heading h1 {
+        font-size: 1.5rem;
+    }
+    .heading p {
+        font-size: 1rem;
+    }
+    main {
+        width: 90vw;
+    }
+    .row {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .container .toggle {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    main {
+        top: 10rem;
+    }
+    .row {
+        grid-template-columns: 1fr;
+    }
+}
