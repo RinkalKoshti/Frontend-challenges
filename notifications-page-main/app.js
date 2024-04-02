@@ -8,7 +8,6 @@ activeDiv.forEach((div) => {
         let dot = div.querySelector("div.content > p > span.dot");
         dot.classList.add("active"); 
         let count = notifyNo.innerText;
-        if(div.getAttribute)
         if (count == 3 || count == 2) {
             count = count-1;
             notifyNo.innerText = count;
