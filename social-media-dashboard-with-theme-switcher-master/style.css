@@ -120,7 +120,10 @@ header .container .toggle .switch:hover {
 main {
     max-width: 100%;
     width: 80vw;
-    margin: -5rem auto 0 auto;
+    position: absolute;
+    top: 8rem;
+    left: 10%;
+    right: 10%;
 }
 
 .row {
@@ -278,6 +281,10 @@ main .major-cards {
         margin: 0 auto;
         align-items: flex-start;
     }
+    header {
+        background-color: var(--White-bg);
+        height: 20vh;
+    }
     .heading h1 {
         font-size: 1.5rem;
     }
@@ -286,6 +293,7 @@ main .major-cards {
     }
     main {
         width: 90vw;
+        left: 5%;
     }
     .row {
         grid-template-columns: 1fr 1fr;
@@ -302,10 +310,15 @@ main .major-cards {
         justify-content: space-between;
         width: 100%;
     }
-    main {
-        top: 10rem;
-    }
     .row {
         grid-template-columns: 1fr;
+    }
+    header {
+        height: 25vh;
+    }
+    main {
+        top: 10rem;
+        left: 5%;
+        right: 5%;
     }
 }
