@@ -143,10 +143,14 @@ main .major-cards {
     border-radius: 5px;
     display: grid;
     gap: 1rem;
+    background-color: var(--Light-Grayish-Blue-card-bg);
 }
 
-.card-light {
-    background-color: var(--Light-Grayish-Blue-card-bg);
+
+.card:hover,
+.small-card:hover {
+    cursor: pointer;
+    filter: brightness(0.9);
 }
 
 .one {
@@ -162,6 +166,7 @@ main .major-cards {
               linear-gradient(to right, var(--Instagram-one), var(--Instagram-two)) border-box;
     border-top: 2px solid transparent;
 }
+
 
 .four {
     border-top: 2px solid var(--YouTube);
@@ -263,16 +268,28 @@ main .major-cards {
     color: var(--White-text);
 }
 
-.dark-h2 {
+.dark-body h2 {
     color: var(--White-text);
 }
 
-.dark-header-top {
+.dark-body header {
     background: var(--Very-Dark-Blue-top-bg-pattern);
 }
 
-.dark-card {
+.dark-body .card,
+.dark-body .small-card {
     background: var(--Dark-Desaturated-Blue-card-bg);
+}
+
+.dark-body .card:hover, 
+.dark-body .small-card:hover {
+    filter: brightness(1.5);
+}
+
+.dark-body .three {
+    background: linear-gradient(var(--Dark-Desaturated-Blue-card-bg), var(--Dark-Desaturated-Blue-card-bg)) padding-box,
+              linear-gradient(to right, var(--Instagram-one), var(--Instagram-two)) border-box;
+    border-top: 2px solid transparent;
 }
 
 @media only screen and (max-width:786px) {
