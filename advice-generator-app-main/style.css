@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+body {
+    background-color: var(--dark-blue);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.advice-box {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 500px;
+    border-radius: 10px;
+    background-color: var(--dark-grayish-blue);
+    color: var(--light-cyan);
+    padding: 40px 40px 50px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.75rem;
+    box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, .1);
+}
+
+small {
+    color: var(--neon-green);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.divider {
+    width: 100%;
+    background-image: url("images/pattern-divider-desktop.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.dice-box {
+    width: 60px;
+    height: 60px;
+    background-color: var(--neon-green);
+    padding: 12px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    margin-top: -25px;
+}
+
+.dice-box:hover {
+    box-shadow: 0 0 20px 5px var(--neon-green), 0 0 20px 5px rgba(0, 0, 0, .8);
+}
+
+
+@media only screen and (max-width: 600px) {
+    .advice-box {
+        max-width: 90%;
+    }
+    .divider {
+        background-image: url("images/pattern-divider-mobile.svg");
+    }
+}
