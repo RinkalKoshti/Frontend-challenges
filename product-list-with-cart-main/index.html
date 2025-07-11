@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product listing page</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="product-listing-container">
+      <div class="product-container">
+        <header>
+          <h1>Desserts</h1>
+        </header>
+        <main>
+          <div class="card">
+            <img
+              src="./assets/images/image-waffle-desktop.jpg"
+              alt="waffle-image"
+            />
+            <div>
+              <div class="card-details">
+                <span>Waffle</span>
+                <p class="title">Waffle with Berries</p>
+                <p class="price">$6.50</p>
+              </div>
+              <button class="btn" id="btn" onclick="addToCart();">
+                <i class="fa-solid fa-cart-plus"></i>&nbsp;&nbsp;Add to Cart
+              </button>
+              <button class="add-btn">
+                <input type="button" id="minus-btn" value="-" onclick="incrementValue();"/>
+                <input type="text" size="1" id="number-btn" value="1" maxlength="2" max="10" disabled>
+                <input type="button" id="plus-btn" value="+" onclick="decrementValue();" />
+          </button>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/image-creme-brulee-desktop.jpg"
+              alt="creme-brulee-image"
+            />
+            <div>
+              <div class="card-details">
+                <span>Creme Brulee</span>
+                <p class="title">Vanilla with Creme Brulee</p>
+                <p class="price">$7.00</p>
+              </div>
+              <button class="btn">
+                <i class="fa-solid fa-cart-plus"></i>&nbsp;&nbsp;Add to Cart
+              </button>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/image-macaron-desktop.jpg"
+              alt="macaron-image"
+            />
+            <div>
+              <div class="card-details">
+                <span>Macaron</span>
+                <p class="title">Macaron mix of Five</p>
+                <p class="price">$8.00</p>
+              </div>
+              <button class="btn">
+                <i class="fa-solid fa-cart-plus"></i>&nbsp;&nbsp;Add to Cart
+              </button>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/image-tiramisu-desktop.jpg"
+              alt="classic-tiramisu-image"
+            />
+            <div>
+              <div class="card-details">
+                <span>Tiramisu</span>
+                <p class="title">Classic Tiramisu</p>
+                <p class="price">$5.50</p>
+              </div>
+              <button class="btn">
+                <i class="fa-solid fa-cart-plus"></i>&nbsp;&nbsp;Add to Cart
+              </button>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/image-baklava-desktop.jpg"
+              alt="pistachio-baklava-image"
+            />
+            <div>
+              <div class="card-details">
+                <span>Baklava</span>
+                <p class="title">Pistachio Baklava</p>
+                <p class="price">$4.00</p>
+              </div>
+              <button class="btn">
+                <i class="fa-solid fa-cart-plus"></i>&nbsp;&nbsp;Add to Cart
+              </button>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/image-meringue-desktop.jpg"
+              alt="lemon-meringue-pie-image"
+            />
+            <div>
+              <div class="card-details">
+                <span>Meringue</span>
+                <p class="title">Lemon Meringue Pie</p>
+                <p class="price">$5.00</p>
+              </div>
+              <button class="btn">
+                <i class="fa-solid fa-cart-plus"></i>&nbsp;&nbsp;Add to Cart
+              </button>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/image-cake-desktop.jpg"
+              alt="red-velvet-cake-image"
+            />
+            <div>
+              <div class="card-details">
+                <span>Cake</span>
+                <p class="title">Red Velvet Cake</p>
+                <p class="price">$4.50</p>
+              </div>
+              <button class="btn">
+                <i class="fa-solid fa-cart-plus"></i>&nbsp;&nbsp;Add to Cart
+              </button>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/image-waffle-desktop.jpg"
+              alt="salted-caramel-brownie-image"
+            />
+            <div>
+              <div class="card-details">
+                <span>Brownie</span>
+                <p class="title">Salted Caramel Brownie</p>
+                <p class="price">$5.50</p>
+              </div>
+              <button class="btn">
+                <i class="fa-solid fa-cart-plus"></i>&nbsp;&nbsp;Add to Cart
+              </button>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/image-panna-cotta-desktop.jpg"
+              alt="vanilla-panna-cotta-image"
+            />
+            <div>
+              <div class="card-details">
+                <span>Panna Cotta</span>
+                <p class="title">Vanilla Panna Cotta</p>
+                <p class="price">$6.50</p>
+              </div>
+              <button class="btn">
+                <i class="fa-solid fa-cart-plus"></i>&nbsp;&nbsp;Add to Cart
+              </button>
+            </div>
+          </div>
+        </main>
+      </div>
+      <div class="cart-container">
+        <div class="cart-main">
+          <header>
+            <h2>Your Cart(0)</h2>
+          </header>
+          <div class="empty-cart">
+            <img
+              src="./assets/images/illustration-empty-cart.svg"
+              alt="empty-cart"
+            />
+            <p>Your added items will appear here</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="script.js"></script>
+  </body>
+  
+</html>
